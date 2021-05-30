@@ -1,0 +1,679 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    font-family: 'Sansita Swashed', cursive;
+    min-height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(../slike/background1.jpg) center/cover fixed;
+}
+
+.naslov h1 {
+    font-family: 'Nerko One', cursive;
+    font-size: 70px;
+    font-weight: bold;
+    color: rgb(196, 190, 190);
+    text-transform: capitalize;
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -22%);
+    animation: pulsate 2s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.nav-bar {
+    position: absolute;
+    z-index: 1;
+    top: 5%;
+    right: 3%;
+}
+
+.nav-bar .fa {
+    font-size: 20px;
+    padding: 9px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: rgb(238, 192, 93);
+    font-size: 25px;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.nav-bar a:hover {
+    color: rgb(86, 102, 119);
+    transition: 1s;
+}
+
+@media screen and (max-width: 430px) {
+    .nav-bar {
+        margin-top: 20px;
+        margin-left: 20px;
+        display: flex;
+    }
+
+    .nav-bar a, .nav-bar .fa {
+        font-size: 15px;
+    }
+
+    .naslov h1 {
+        font-size: 30px;
+        top: 25%;
+    }
+}
+
+#sidenav {
+    position: fixed;
+    width: 230px;
+    left: -230px;
+    height: 100vh;
+    background: rgb(97, 96, 96);
+    padding-top: 140px;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+#sidenav.active {
+    left: 0;
+}
+
+#sidenav a {
+    text-decoration: none;
+    color: rgb(219, 219, 219);
+    font-size: 24px;
+    display: block;
+    padding: 20px 20px;
+    border-bottom: 1px solid rgb(124, 123, 123);
+}
+
+#sidenav a:hover {
+    background: rgb(219, 219, 219);
+    color: rgb(97, 96, 96);
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.4s;
+}
+
+.open-nav {
+    color: rgb(238, 192, 93);
+    font-size: 55px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1;
+    left: 20px;
+    top: 3%;
+}
+
+@media screen and (max-width: 430px) {
+    #sidenav {
+        width: 110px;
+        padding-top: -80px;
+    }
+
+    #sidenav a, #sidenav a:hover {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .open-nav {
+        font-size: 30px;
+        left: 28px;
+        top: 10px;
+    }
+}
+
+.container {
+    position: fixed;
+    z-index: 1;
+    top: 18%;
+    left: 35%;
+    border-radius: 5%;
+    border: 5px solid rgb(128, 126, 126);
+    background: rgb(207, 204, 204);
+    width: 30%;
+    padding: 40px;
+    display: none;
+}
+
+.container2 {
+    position: fixed;
+    z-index: 1;
+    top: 3%;
+    left: 33%;
+    border-radius: 5%;
+    border: 5px solid rgb(128, 126, 126);
+    background: rgb(207, 204, 204);
+    width: 35%;
+    height: 95%;
+    padding: 40px;
+    display: none;
+    overflow: scroll;
+}
+
+.login input {
+    width: 95%;
+    padding: 10px;
+    margin: 25px 0px;
+    display: flex;
+    border: 2px solid rgb(102, 102, 102);
+}
+
+.login2 input {
+    width: 95%;
+    padding: 10px;
+    margin: 13px 0px;
+    display: flex;
+    border: 2px solid rgb(102, 102, 102);
+}
+
+.login button, .login2 button {
+    color: rgb(218, 211, 211);
+    background: rgb(77, 75, 75);
+    font-weight: bold;
+    border: rgb(51, 51, 51) 1px solid;
+    padding: 10px;
+    width: 95%;
+    cursor: pointer;
+}
+
+.login2 button {
+    width: 95%;
+}
+
+.login button:hover, .login2 button:hover {
+    color: rgb(34, 34, 34);
+    background: lightgray;
+    transition: 1s;
+}
+
+.cancel button {
+    margin: 20px 0;
+    padding: 5px;
+    padding-bottom: 15px;
+    background: rgb(77, 75, 75);
+    border: rgb(39, 39, 39) 1px solid;
+    color: lightgray;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cancel2 button {
+    margin: 20px 0;
+    padding: 3px;
+    padding-bottom: 15px;
+    background: rgb(77, 75, 75);
+    border: rgb(39, 39, 39) 1px solid;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.cancel button:hover, .cancel2 button:hover {
+    color: rgb(34, 34, 34);
+    background: lightgray;
+    transition: 1s;
+}
+
+@media screen and (max-width: 430px) {
+    .container {
+        top: 14%;
+        left: 10%;
+        width: 80%;
+        padding: 30px;
+    }
+
+    .container2 {
+        top: 2%;
+        left: 5%;
+        width: 90%;
+        padding: 20px;
+    }
+
+    .login2 input {
+        width: 95%;
+        padding: 5px;
+        margin: 8px 0px;
+    }
+
+    .cancel2 button {
+        margin-top: 7px;
+    }
+}
+
+.naslov h2 {
+    position: absolute;
+    left: 40%;
+    padding-bottom: 100px;
+    padding-top: 60px;
+    text-transform: capitalize;
+    font-size: 43px;
+    color: rgb(160, 156, 156);
+    font-family: 'Sansita Swashed', cursive;
+}
+
+.container1 {
+    text-align: right;
+    height: 310%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url(../slike/background2.jpg) center/cover fixed;
+}
+
+#upisPodataka {
+    padding-top: 220px;
+}
+
+.knjige {
+    border: 1px solid rgb(151, 150, 150);
+    margin-left: 110px;
+    margin-bottom: 90px;
+    width: 38%;
+    height: 45vh;
+    background: rgb(209, 206, 206);
+    border-radius: 5%;
+    box-shadow: gray 5px 5px;
+    float: left;
+}
+
+.knjige:hover {
+    transition: 0.5s;
+    transform: scale(1.05);
+}
+
+.klasaZaKnjigu {
+    width: 40%;
+    height: 90%;
+    border-radius: 3%;
+    margin-top: -190px;
+    margin-left: 10px;
+    float: left;
+}
+
+.naslovZaKnjigu {
+    font-size: 29px;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-top: 15px;
+    color: rgb(43, 42, 42);
+    text-decoration: none;
+    line-height: 60px;
+    font-family: 'Imbue', serif;
+}
+
+.dugmeZaKupi {
+    color: rgb(192, 192, 192);
+    background: rgb(68, 67, 67);
+    padding: 7px;
+    width: 70px;
+    border: none;
+    border-radius: 10%;
+    margin-right: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    font-family: 'Imbue', serif;
+}
+
+.dugmeZaKupi1 {
+    color: rgb(192, 192, 192);
+    background: rgb(68, 67, 67);
+    padding: 12px;
+    width: 100px;
+    border: none;
+    border-radius: 10%;
+    margin-right: 100px;
+    cursor: pointer;
+    font-size: 24px;
+    font-family: 'Imbue', serif;
+}
+
+.span {
+    margin-top: -41px;
+}
+
+.dijalog {
+    border: 1px solid rgb(151, 150, 150);
+    width: 30%;
+    background: rgb(131, 130, 130);
+    border-radius: 5%;
+    box-shadow: rgb(83, 83, 83) 5px 5px;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    font-family: 'Imbue', serif;
+    display: none;
+    padding-bottom: 260px;
+    padding-top: 10px;
+}
+
+.dijalog p {
+    margin-top: 30px;
+    font-size: 32px;
+    color: rgb(37, 37, 37);
+    font-weight: bold;
+}
+
+.dijalog button {
+    font-size: 23px;
+    border: 1px solid gray;
+    margin: 15px;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(56, 56, 56);
+    background: rgb(223, 220, 220);
+    border-radius: 15%;
+    cursor: pointer;
+    font-family: 'Imbue', serif;
+}
+
+.dijalog button:hover {
+    background: rgb(56, 56, 56);
+    color: rgb(223, 220, 220);
+    transition: 0.5s;
+}
+
+.dugmeZaKupi:hover, .dugmeZaKupi1:hover {
+    background: rgb(128, 128, 128);
+    color: rgb(68, 67, 67);
+    transition: 0.5s;
+}
+
+.far, .zvezde {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
+.popup {
+    display: none;
+}
+
+#korisnici {
+    min-height: 110vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(../slike/backround3.jpg) center/cover fixed;
+}
+
+.naslov3 h2 {
+    position: absolute;
+    left: 42%;
+    padding-top: 50px;
+    font-size: 52px;
+    color: rgb(160, 156, 156);
+    font-family: 'Sansita Swashed', cursive;
+}
+
+@media screen and (max-width: 430px) {
+    #upisPodataka {
+        padding-top: 180px;
+    }
+
+    #korisnici {
+        min-height: 70vh;
+    }
+
+    .naslov3 h2 {
+        left: 35%;
+        padding-top: 60px;
+        font-size: 33px;
+    }
+}
+
+table {
+    width: 90%;
+    padding-top: 180px;
+    font-family: 'kalam', sans-serif;
+    padding-left: 150px;
+}
+
+.zaSvePodatke, td {
+    font-size: 31px;
+    color: rgb(204, 203, 203);
+    padding: 20px;
+    border-bottom: 1px solid rgb(107, 107, 107);
+    font-family: 'Imbue', serif;
+}
+
+.dugme {
+    font-size: 25px;
+    border: 1px solid gray;
+    padding: 11px;
+    text-decoration: none;
+    color: rgb(56, 56, 56);
+    background: rgb(223, 220, 220);
+    border-radius: 15%;
+    cursor: pointer;
+    font-family: 'Imbue', serif;
+}
+
+.dugme:hover {
+    background: rgb(56, 56, 56);
+    color: rgb(223, 220, 220);
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 430px) {
+    .knjige {
+        margin-left: 20px;
+        margin-bottom: 60px;
+        width: 90%;
+        height: 50vh;
+    }
+
+    .container1 {
+        height: 620%;
+    }
+
+    .naslov h2 {
+        font-size: 30px;
+        left: 30%;
+    }
+
+    .klasaZaKnjigu {
+        height: 83%;
+        margin-top: -170px;
+    }
+
+    .naslovZaKnjigu {
+        line-height: 55px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    table {
+        width: 95%;
+        padding-top: 150px;
+        font-family: 'kalam', sans-serif;
+        padding-left: 15px;
+        padding-bottom: 80px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    td:before {
+        padding: 20px;
+    }
+
+    .dugme {
+        font-size: 19px;
+        padding: 8px;
+    }
+
+    td:nth-of-type(1):before {
+        content: "Ime: ";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Prezime: ";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Username: ";
+    }
+
+    td:nth-of-type(4):before {
+        content: "Prikazi: ";
+    }
+
+    td:nth-of-type(5):before {
+        content: "Izmeni: ";
+    }
+
+    td:nth-of-type(6):before {
+        content: "Obrisi: ";
+    }
+
+}
+
+}
+@media screen and (max-width: 430px) {
+    .knjige {
+        margin-left: 20px;
+        margin-bottom: 60px;
+        width: 90%;
+        height: 55vh;
+    }
+
+    .container1 {
+        height: 670%;
+    }
+
+    .naslov h2 {
+        font-size: 30px;
+        left: 30%;
+    }
+
+    .klasaZaKnjigu {
+        height: 83%;
+        margin-top: -210px;
+    }
+}
+
+.dijalog {
+    border: 1px solid rgb(151, 150, 150);
+    width: 30%;
+    height: 20vh;
+    background: rgb(153, 151, 151);
+    border-radius: 5%;
+    box-shadow: gray 5px 5px;
+    text-align: center;
+    position: fixed;
+    top: 30%;
+    left: 33%;
+    z-index: 1;
+    font-family: 'Imbue', serif;
+    display: none;
+}
+
+.dijalog p {
+    margin-top: 30px;
+    font-size: 32px;
+    color: rgb(37, 37, 37);
+    font-weight: bold;
+}
+
+.dijalog button {
+    font-size: 23px;
+    border: 1px solid gray;
+    margin: 15px;
+    padding: 10px;
+    width: 70px;
+    text-decoration: none;
+    color: rgb(56, 56, 56);
+    background: rgb(223, 220, 220);
+    border-radius: 15%;
+    cursor: pointer;
+    font-family: 'Imbue', serif;
+}
+
+.dijalog button:hover {
+    background: rgb(56, 56, 56);
+    color: rgb(223, 220, 220);
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 430px) {
+    .dijalog {
+        width: 95%;
+        left: 2%;
+        height: 28vh;
+    }
+}
+
+#greska, #greska1, #greska2, #greska3, #greska4, #greska5 {
+    display: none;
+    color: red;
+}
+
+.zuta {
+    color: yellow;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.zuta1 {
+    color: yellow;
+    font-size: 20px;
+    padding: 3px;
+}
+
+.unchecked {
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.unchecked1 {
+    color: black;
+    font-size: 20px;
+    padding: 3px;
+}
+
+footer {
+    background: #444444;
+    color: #c9c3c3;
+    padding: 40px 0;
+    font-size: 27px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Imbue', serif;
+}
+
+@media screen and (max-width: 430px) {
+    footer {
+        padding: 20px 0;
+        font-size: 18px;
+    }
+}

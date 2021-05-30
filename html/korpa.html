@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/728cc88328.js" crossorigin="anonymous"></script>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap" rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Imbue:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/korpa.css">
+    <title>Books</title>
+</head>
+
+<body>
+
+<header>
+    <div class="nav-bar">
+        <a href="#" class="loginbutton" onclick="openForm()"> <i class="fa fa-sign-in-alt"></i> LogIn</a>
+        <a href="#" class="loginbutton" onclick="openForm1()"> <i class="fa fa-sign-in-alt"></i> Registracija</a>
+        <a href="index.html"> <i class="fa fa-home"></i> Pocetna</a>
+        <a href="korisnici.html"> <i class="fa fa-user-alt"></i> Korisnici</a>
+
+    </div>
+</header>
+
+<form action="#" method="post" class="container" id="connect">
+    <div class="login">
+        <label for="username"><b><i class="fas fa-user-alt"></i> Username</b></label>
+        <input type="text" name="username" placeholder="Enter Your Username" id="username" required>
+        <label for="password"><b><i class="fas fa-lock"></i> Password</b></label>
+        <input type="password" name="password" placeholder="Enter Your Password" id="password" required>
+        <button type="submit" id="loginForma">Log In</button>
+    </div>
+    <div class="cancel">
+        <button type="button" class="cancelbutton" onclick="closeForm()">Cancel <i class="far fa-window-close"></i>
+        </button>
+    </div>
+    <script>
+        function openForm() {
+            document.getElementById("connect").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("connect").style.display = "none";
+        }
+    </script>
+</form>
+
+<form action="#" method="GET" class="container2" id="connect1">
+    <div class="login2">
+        <label for="Ime"><b> Ime <p id="greska">Ime mora sadrzati izmedju 3 i 15 slova (bez brojeva)</p></b></label>
+        <input type="text" name="ime" placeholder="Enter Your Name" id="imeRegistracija">
+        <label for="Prezime"><b> Prezime <p id="greska1">Prezime mora sadrzati izmedju 5 i 15 slova (bez brojeva)</p>
+        </b></label>
+        <input type="text" name="LastName" placeholder="Enter Your LastName" id="prezimeRegistracija">
+        <label for="username"><b> Username <p id="greska2">Username mora sadrzati izmedju 6 i 16 slova (i bar 1
+            broj)</p></b></label>
+        <input type="text" name="username" placeholder="Enter Your Username" id="usernameRegistracija">
+        <label for="password"><b> Password <p id="greska3">Password mora imati bar 8 karaktera (velika i mala
+            slova,brojeve)</p></b></label>
+        <input type="password" name="password" placeholder="Enter Your Password" id="passwordRegistracija">
+        <label for="Address"><b> Potvrdi Password <p id="greska4">Sifre se ne poklapaju</p></b></label>
+        <input type="password" name="Address" placeholder="Enter Your Password" id="potvrdiPasswordRegistracija">
+        <label for="email"><b> Email <p id="greska5">Email mora biti forme ...@example.com</p></b></label>
+        <input type="text" name="email" placeholder="Enter Your Email" id="emailRegistracija">
+        <button type="submit" id="registracija">Potvrdi</button>
+    </div>
+    <div class="cancel2">
+        <button type="button" class="cancelbutton" onclick="closeForm1()">Cancel <i class="far fa-window-close"></i>
+        </button>
+    </div>
+    <script>
+        function openForm1() {
+            document.getElementById("connect1").style.display = "block";
+        }
+
+        function closeForm1() {
+            document.getElementById("connect1").style.display = "none";
+        }
+    </script>
+</form>
+
+<section>
+    <table>
+        <thead>
+        <tr class="products">
+            <td id="naziv" class="podaci12345">Artikl</td>
+            <td id="cena" class="podaci12345">Cena</td>
+            <td id="dugmezabrisanje" class="podaci12345">Ukloni</td>
+            <td id="kupi">Kupi</td>
+        </tr>
+        </thead>
+    </table>
+</section>
+
+<div id="ukupnaCena" class="ukupnaCenaKorpe"></div>
+
+<footer>
+    Copyright &copy; 2020, Petar Petrović, All Rights Reserved, email: ppetar33@gmail.com
+</footer>
+<script src="../javascript/logIN.js"></script>
+<script src="../javascript/korpa.js"></script>
+<script src="../javascript/registracija.js"></script>
+
+
+</body>
+</html>

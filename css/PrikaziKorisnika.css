@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    font-family: 'Sansita Swashed', cursive;
+    min-height: 180%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(../slike/backround3.jpg) center/cover fixed;
+}
+
+.nav-bar {
+    position: absolute;
+    z-index: 1;
+    top: 5%;
+    right: 3%;
+}
+
+.nav-bar .fa {
+    font-size: 20px;
+    padding: 9px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: rgb(238, 192, 93);
+    font-size: 25px;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.nav-bar a:hover {
+    color: rgb(86, 102, 119);
+    transition: 1s;
+}
+
+@media screen and (max-width: 430px) {
+    .nav-bar {
+        position: relative;
+        padding-top: 10px;
+        padding-left: 10px;
+        display: flex;
+    }
+
+    .nav-bar a, .nav-bar .fa {
+        font-size: 15px;
+    }
+
+    header {
+        min-height: 200%;
+    }
+}
+
+.container {
+    position: fixed;
+    z-index: 1;
+    top: 18%;
+    left: 35%;
+    border-radius: 5%;
+    border: 5px solid rgb(128, 126, 126);
+    background: rgb(207, 204, 204);
+    width: 30%;
+    padding: 40px;
+    display: none;
+}
+
+.container2 {
+    position: fixed;
+    z-index: 1;
+    top: 3%;
+    left: 33%;
+    border-radius: 5%;
+    border: 5px solid rgb(128, 126, 126);
+    background: rgb(207, 204, 204);
+    width: 35%;
+    height: 95%;
+    padding: 40px;
+    display: none;
+    overflow: scroll;
+
+}
+
+.login input {
+    width: 95%;
+    padding: 10px;
+    margin: 25px 0px;
+    display: flex;
+    border: 2px solid rgb(102, 102, 102);
+}
+
+.login2 input {
+    width: 95%;
+    padding: 10px;
+    margin: 13px 0px;
+    display: flex;
+    border: 2px solid rgb(102, 102, 102);
+}
+
+.login2 button {
+    width: 95%;
+}
+
+.login button, .login2 button {
+    color: rgb(218, 211, 211);
+    background: rgb(77, 75, 75);
+    font-weight: bold;
+    border: rgb(51, 51, 51) 1px solid;
+    padding: 10px;
+    width: 95%;
+    cursor: pointer;
+}
+
+.login button:hover, .login2 button:hover {
+    color: rgb(34, 34, 34);
+    background: lightgray;
+    transition: 1s;
+}
+
+.cancel button {
+    margin: 20px 0;
+    padding: 11px;
+    padding-bottom: 15px;
+    background: rgb(77, 75, 75);
+    border: rgb(39, 39, 39) 1px solid;
+    color: lightgray;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cancel2 button {
+    margin: 20px 0;
+    padding: 11px;
+    padding-bottom: 15px;
+    background: rgb(77, 75, 75);
+    border: rgb(39, 39, 39) 1px solid;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.cancel button:hover, .cancel2 button:hover {
+    color: rgb(34, 34, 34);
+    background: lightgray;
+    transition: 1s;
+}
+
+@media screen and (max-width: 430px) {
+    .container {
+        top: 14%;
+        left: 10%;
+        width: 80%;
+        padding: 30px;
+    }
+
+    .container2 {
+        top: 2%;
+        left: 5%;
+        width: 90%;
+        padding: 20px;
+    }
+
+    .login2 input {
+        width: 95%;
+        padding: 5px;
+        margin: 8px 0px;
+    }
+
+    .cancel2 button {
+        margin-top: 7px;
+    }
+}
+
+.slika {
+    width: 18%;
+    height: 29%;
+    position: absolute;
+    border-radius: 50%;
+    left: 36%;
+    top: 24%;
+    opacity: 0.7;
+}
+
+.pozicija {
+    position: absolute;
+    top: 58%;
+    left: 30%;
+}
+
+.tekst123 {
+    display: flex;
+    margin: 30px;
+    background-color: rgb(129, 124, 124);
+    color: rgb(26, 25, 25);
+    font-size: 28px;
+    padding: 23px;
+    width: 120%;
+    border-radius: 7%;
+    font-family: 'Imbue', serif;
+    font-weight: 600;
+}
+
+.dugme {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-size: 25px;
+    border: 1px solid gray;
+    padding: 11px;
+    text-decoration: none;
+    color: rgb(56, 56, 56);
+    background: rgb(223, 220, 220);
+    border-radius: 15%;
+    cursor: pointer;
+    font-family: 'Imbue', serif;
+}
+
+.dugme:hover {
+    background: rgb(56, 56, 56);
+    color: rgb(223, 220, 220);
+    transition: 0.5s;
+}
+
+#greska, #greska1, #greska2, #greska3, #greska4, #greska5 {
+    display: none;
+    color: red;
+}
+
+footer {
+    background: #444444;
+    color: #c9c3c3;
+    padding: 40px 0;
+    font-size: 27px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Imbue', serif;
+}
+
+@media screen and (max-width: 430px) {
+    footer {
+        padding: 20px 0;
+        font-size: 18px;
+    }
+
+    .slika {
+        width: 47%;
+        height: 30%;
+        left: 25%;
+        top: 20%;
+    }
+
+    .pozicija {
+        top: 56%;
+        left: 3%;
+    }
+
+    .tekst123 {
+        width: 100%;
+    }
+}

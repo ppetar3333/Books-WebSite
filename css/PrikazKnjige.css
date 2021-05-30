@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    font-family: 'Sansita Swashed', cursive;
+    min-height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(../slike/background2.jpg) center/cover fixed;
+}
+
+.nav-bar {
+    position: absolute;
+    z-index: 1;
+    top: 5%;
+    right: 3%;
+}
+
+.nav-bar .fa {
+    font-size: 20px;
+    padding: 9px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: rgb(238, 192, 93);
+    font-size: 25px;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.nav-bar a:hover {
+    color: rgb(86, 102, 119);
+    transition: 1s;
+}
+
+@media screen and (max-width: 430px) {
+    .nav-bar {
+        position: relative;
+        padding-top: 13px;
+        padding-left: 10px;
+        display: flex;
+    }
+
+    .nav-bar a, .nav-bar .fa {
+        font-size: 15px;
+    }
+
+    header {
+        min-height: 185%;
+    }
+}
+
+.container {
+    position: fixed;
+    z-index: 1;
+    top: 18%;
+    left: 35%;
+    border-radius: 5%;
+    border: 5px solid rgb(128, 126, 126);
+    background: rgb(207, 204, 204);
+    width: 30%;
+    padding: 40px;
+    display: none;
+}
+
+.container2 {
+    position: fixed;
+    z-index: 1;
+    top: 3%;
+    left: 33%;
+    border-radius: 5%;
+    border: 5px solid rgb(128, 126, 126);
+    background: rgb(207, 204, 204);
+    width: 35%;
+    height: 95%;
+    padding: 40px;
+    display: none;
+    overflow: scroll;
+}
+
+.login input {
+    width: 95%;
+    padding: 10px;
+    margin: 25px 0px;
+    display: flex;
+    border: 2px solid rgb(102, 102, 102);
+}
+
+.login2 input {
+    width: 95%;
+    padding: 10px;
+    margin: 13px 0px;
+    display: flex;
+    border: 2px solid rgb(102, 102, 102);
+}
+
+.login2 button {
+    width: 95%;
+}
+
+.login button, .login2 button {
+    color: rgb(218, 211, 211);
+    background: rgb(77, 75, 75);
+    font-weight: bold;
+    border: rgb(51, 51, 51) 1px solid;
+    padding: 10px;
+    width: 95%;
+    cursor: pointer;
+}
+
+.login button:hover, .login2 button:hover {
+    color: rgb(34, 34, 34);
+    background: lightgray;
+    transition: 1s;
+}
+
+.cancel button {
+    margin: 20px 0;
+    padding: 11px;
+    padding-bottom: 15px;
+    background: rgb(77, 75, 75);
+    border: rgb(39, 39, 39) 1px solid;
+    color: lightgray;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cancel2 button {
+    margin: 20px 0;
+    padding: 11px;
+    padding-bottom: 15px;
+    background: rgb(77, 75, 75);
+    border: rgb(39, 39, 39) 1px solid;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.cancel button:hover, .cancel2 button:hover {
+    color: rgb(34, 34, 34);
+    background: lightgray;
+    transition: 1s;
+}
+
+@media screen and (max-width: 430px) {
+    .container {
+        top: 14%;
+        left: 10%;
+        width: 80%;
+        padding: 30px;
+    }
+
+    .container2 {
+        top: 2%;
+        left: 5%;
+        width: 90%;
+        padding: 20px;
+    }
+
+    .login2 input {
+        width: 95%;
+        padding: 5px;
+        margin: 8px 0px;
+    }
+
+    .cancel2 button {
+        margin-top: 7px;
+    }
+}
+
+.klasaZaSliku {
+    width: 30%;
+    height: 75%;
+    margin: 10px 30px 0px 20px;
+    border-radius: 3%;
+    box-shadow: gray 2px 2px;
+    position: absolute;
+    top: 15%;
+    left: 14%;
+}
+
+.tekst {
+    margin-right: 20px;
+    text-align: justify;
+    line-height: 28px;
+    font-size: 20px;
+    margin-top: 12px;
+    margin-left: 8px;
+    font-family: 'Imbue', serif;
+    color: rgb(32, 32, 32);
+    font-weight: 600;
+}
+
+.knjige {
+    border: 1px solid rgb(179, 175, 175);
+    position: absolute;
+    top: 17%;
+    left: 49%;
+    width: 35%;
+    height: 74%;
+    background: rgb(209, 206, 206);
+    border-radius: 2%;
+    box-shadow: gray 3px 3px;
+    overflow: scroll;
+}
+
+.izmeni {
+    float: right;
+    margin-right: 15px;
+    margin-top: 15px;
+    color: rgb(182, 174, 174);
+    background: rgb(61, 60, 60);
+    border: none;
+    padding: 3px;
+    width: 70px;
+    border-radius: 10%;
+    font-family: 'Imbue', serif;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.izmeni:hover {
+    background: rgb(182, 174, 174);
+    color: rgb(61, 60, 60);
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 430px) {
+    .klasaZaSliku {
+        width: 73%;
+        height: 63%;
+        margin: 15px 30px 0px 20px;
+        top: 20%;
+        left: 7%;
+    }
+
+    .knjige {
+        top: 87%;
+        left: 12%;
+        width: 73%;
+        height: 93%;
+    }
+
+    .izmeni {
+        margin-right: 10px;
+        margin-top: 10px;
+        padding: 3px;
+        width: 43px;
+        font-size: 22px;
+    }
+
+    .tekst {
+        margin-right: 10px;
+    }
+}
+
+.dijalog {
+    border: 1px solid rgb(151, 150, 150);
+    width: 30%;
+    height: 20vh;
+    background: rgb(209, 206, 206);
+    border-radius: 5%;
+    box-shadow: gray 5px 5px;
+    text-align: center;
+    position: fixed;
+    top: 30%;
+    left: 33%;
+    z-index: 1;
+    font-family: 'Imbue', serif;
+    display: none;
+}
+
+.dijalog p {
+    margin-top: 30px;
+    font-size: 30px;
+    color: rgb(37, 37, 37);
+    font-weight: bold;
+}
+
+.nazivKnjige1 {
+    font-size: 35px;
+    color: rgb(59, 59, 59);
+}
+
+.dijalog button {
+    font-size: 23px;
+    border: 1px solid gray;
+    margin: 15px;
+    padding: 10px;
+    width: 70px;
+    text-decoration: none;
+    color: rgb(56, 56, 56);
+    background: rgb(223, 220, 220);
+    border-radius: 15%;
+    cursor: pointer;
+    font-family: 'Imbue', serif;
+}
+
+.dijalog button:hover {
+    background: rgb(56, 56, 56);
+    color: rgb(223, 220, 220);
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 430px) {
+    .dijalog {
+        width: 95%;
+        left: 2%;
+        height: 28vh;
+    }
+}
+
+#greska, #greska1, #greska2, #greska3, #greska4, #greska5 {
+    display: none;
+    color: red;
+}
+
+footer {
+    background: #444444;
+    color: #c9c3c3;
+    padding: 40px 0;
+    font-size: 27px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Imbue', serif;
+}
+
+@media screen and (max-width: 430px) {
+    footer {
+        padding: 20px 0;
+        font-size: 18px;
+    }
+}
